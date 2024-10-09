@@ -1,0 +1,125 @@
+body {
+    background-color: #2B4257;
+    color: #ffffff;
+}
+
+h1, h2, h3 {
+    color: #88A9C3;
+}
+
+.navbar {
+    background-color: #091235;
+}
+
+.nav-link {
+    color: #88A9C3 !important;
+}
+
+.card-img-top {
+    width: 100%;         /* Ensure the image takes up the full width of the card */
+    height: 300px;       /* Set a fixed height for the images */
+    object-fit: cover;   /* Crop the image to fit the container without distortion */
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: #88A9C3;
+}
+
+.card-text {
+    color: black; /* Kept as black for readability */
+}
+
+.btn-primary {
+    background-color: #14202E;
+    border-color: #14202E;
+}
+
+.btn-primary:hover {
+    background-color: #88A9C3;
+    border-color: #88A9C3;
+}
+
+.btn-success {
+    background-color: #88A9C3;
+    border-color: #88A9C3;
+}
+
+.btn-success:hover {
+    background-color: #14202E;
+    border-color: #14202E;
+}
+
+/* Discard button in the cart */
+.btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+/* Modal content for cart */
+.modal-content {
+    background-color: #14202E;
+    color: #ffffff;
+}
+
+.modal-footer {
+    color: black;
+}
+
+/* Notification for user actions */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Styling the cart modal items */
+.list-group-item {
+    background-color: #1c2833; /* Dark background for cart items */
+    color: #88A9C3; /* Text color for readability */
+    border: 1px solid #566573;
+}
+
+.list-group-item span {
+    color: #ffffff; /* Price text color set to white for better visibility */
+}
+
+/* Styling the cart button in the navbar */
+#cart-btn {
+    border: 1px solid #88A9C3;
+    color: #88A9C3;
+}
+
+#cart-btn:hover {
+    background-color: #88A9C3;
+    color: #14202E;
+}
+
+/* Styling for the cart modal heading and total amount */
+#cartModalLabel {
+    color: #88A9C3; /* Accent color for the cart modal title */
+}
+
+#cart-total {
+    color: #ffffff; /* Cart total text color for visibility */
+}
+
+.logo {
+    max-width: 18000px;
+    height: auto;
+    margin-bottom: 20px;
+}

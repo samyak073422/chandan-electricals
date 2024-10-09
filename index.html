@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>CHANDAN Electricals</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#" onclick="scrollToHome()">CHANDAN Electricals</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button id="cart-btn" class="btn btn-outline-light" data-toggle="modal" data-target="#cartModal">
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <header class="text-center my-4" id="home" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <img src="./logo.png.svg" alt="CHANDAN Electricals Logo" class="img-fluid logo" style="max-height: 80%; width: auto;">
+        <h1 style="font-size: 2.5rem;">Welcome to CHANDAN Electricals</h1>
+        <a href="#products" class="btn btn-primary mt-3">Shop Now</a>
+    </header>
+
+    <!-- Products Section -->
+    <div class="container" id="products">
+        <h2 class="text-center my-4">Our Products</h2>
+
+        <!-- Cable Wires Category -->
+        <h3>Cable Wires</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./finolex wire(1).jpeg" class="card-img-top" alt="FINOLEX WIRE">
+                    <div class="card-body">
+                        <h5 class="card-title">FINOLEX WIRE</h5>
+                        <p class="card-text">THE RATE IS ACCORDING PER METER </p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control quantity" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primary add-to-cart" data-name="FINOLEX WIRE" data-price="1200">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./goldmedal wrie(2).jpeg" class="card-img-top" alt=" GOLDMEDAL WIRE">
+                    <div class="card-body">
+                        <h5 class="card-title">GOLDMEDAL WIRE</h5>
+                        <p class="card-text">THE RATE IS ACCORDING PER METER </p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control quantity" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primary add-to-cart" data-name="GOLDMEDAL WIRE" data-price="1100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more wire products as needed -->
+        </div>
+
+        <!-- Switches Category -->
+        <h3>Switches</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./gm switch(1).jpeg" class="card-img-top" alt="GM SWITCH">
+                    <div class="card-body">
+                        <h5 class="card-title">GM SWITCH</h5>
+                        <p class="card-text">Price per unit</p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control quantity" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primary add-to-cart" data-name="GM SWITCH" data-price="150">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./gold medal switch (2).jpeg" class="card-img-top" alt="GOLD MEDAL SWITCH">
+                    <div class="card-body">
+                        <h5 class="card-title">GOLD MEDAL SWITCH</h5>
+                        <p class="card-text">Price per unit</p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control quantity" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primary add-to-cart" data-name="GOLD MEDAL SWITCH" data-price="180">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more switch products as needed -->
+        </div>
+
+        <!-- Lights Category -->
+        <h3>Lights</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./philips light (1).jpeg" class="card-img-top" alt="PHILIPS LIGHT">
+                    <div class="card-body">
+                        <h5 class="card-title">PHILIPS LIGHT</h5>
+                        <p class="card-text">Price per unit</p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control quantity" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primary add-to-cart" data-name="PHILIPS LIGHT" data-price="250">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./sturlight (2).jpeg" class="card-img-top" alt="STUR LIGHT">
+                    <div class="card-body">
+                        <h5 class="card-title">STUR LIGHT</h5>
+                        <p class="card-text">Price per unit</p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control quantity" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primary add-to-cart" data-name="STUR LIGHT" data-price="220">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more light products as needed -->
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <h2 class="text-center my-4">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Get in Touch</h4>
+                <p>If you have any queries or need support, feel free to reach out to us.</p>
+                <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=123+Main+Street,+Your+City,+Your+State" target="_blank">Find us on Google Maps</a></p>
+            </div>
+            <div class="col-md-6">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group" id="cart-items"></ul>
+                    <h5>Total: ₹<span id="cart-total">0.00</span></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="checkout">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center my-4">
+        <p>&copy; 2024 CHANDAN Electricals. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
