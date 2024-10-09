@@ -81,6 +81,46 @@ document.getElementById('checkout').addEventListener('click', function () {
         return;
     }
 
+    // Open the payment modal
+    $('#paymentModal').modal('show');
+});
+
+// WhatsApp payment functionality
+document.getElementById('whatsapp-checkout').addEventListener('click', function () {
+    // Generate product details message
+    let message = "Checkout Details:\n";
+    cart.forEach(product => {
+        message += `Product: ${product.name}, Quantity: ${product.quantity}, Price: ₹${(product.price * product.quantity).toFixed(2)}\n`;
+    });
+    message += `Total: ₹${cart.reduce((total, product) => total + (product.price * product.quantity), 0).toFixed(2)}`;
+
+    // Encode the message for URL
+    const whatsappMessage = encodeURIComponent(message);
+
+    // Open WhatsApp with the generated message
+    window.open(`https://wa.me/7981726626?text=${whatsappMessage}`, '_blank');
+
+    // Clear the cart after checkout
+    cart = [];
+    updateCart(); // Refresh cart display
+    $('#paymentModal').modal('hide'); // Close the payment modal
+});
+
+
+// UPI payment functionality
+document.getElementById('upi-checkout').addEventListener('click', function () {
+    alert("UPI Payment option will be integrated soon.");
+    $('#paymentModal').modal('hide'); // Close the payment modal
+});
+
+
+
+// Google Pay functionality
+document.getElementById('googlepay-checkout').addEventListener('click', function () {
+    alert("Google Pay option will be integrated soon.");
+    $('#paymentModal').modal('hide'); // Close the payment modal
+});
+
     // Generate product details message
     let message = "Checkout Details:\n";
     cart.forEach(product => {
@@ -97,7 +137,7 @@ document.getElementById('checkout').addEventListener('click', function () {
     // Clear the cart after checkout
     cart = [];
     updateCart(); // Refresh cart display
-});
+;
 
 // Scroll to Home function
 function scrollToHome() {
@@ -124,11 +164,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     // Open WhatsApp link (replace 'YOUR_PHONE_NUMBER' with your WhatsApp phone number)
     window.open(`https://wa.me/7981726626?text=${whatsappMessage}`, '_blank');
 });
-
-
-
-
-
 
 
 
