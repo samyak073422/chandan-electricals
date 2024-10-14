@@ -5,30 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+
     <title>CHANDAN Electricals</title>
+    
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#" onclick="scrollToHome()">CHANDAN Electricals</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#products">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <button id="cart-btn" class="btn btn-outline-light" data-toggle="modal" data-target="#cartModal">
-                        Cart (<span id="cart-count">0</span>)
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#" onclick="scrollToHome()">CHANDAN Electricals</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Products Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Products
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <a class="dropdown-item" href="#wires" onclick="scrollToElement('#wires')">Wires</a>
+                            <a class="dropdown-item" href="#switches" onclick="scrollToElement('#switches')">Switches</a>
+                            <a class="dropdown-item" href="#lights" onclick="scrollToElement('#lights')">Lights</a>
+                        </div>
+                    </li>
+                    <!-- Contact Section -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" onclick="scrollToElement('#contact')">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="cart-btn" class="btn btn-outline-light" data-toggle="modal" data-target="#cartModal">
+                            Cart (<span id="cart-count">0</span>)
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        </body>
+  
 
     <!-- Home Page -->
     <header class="text-center my-4" id="home" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -42,7 +57,7 @@
         <h2 class="text-center my-4">Our Products</h2>
 
         <!-- Cable Wires Category -->
-        <h3>Cable Wires</h3>
+        <h3 id="wires">Cable Wires</h3>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -74,11 +89,14 @@
                     </div>
                 </div>
             </div>
+
+           
+
             <!-- Add more wire products as needed -->
         </div>
 
         <!-- Switches Category -->
-        <h3>Switches</h3>
+        <h3 id="switches">Switches</h3>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -114,7 +132,7 @@
         </div>
 
         <!-- Lights Category -->
-        <h3>Lights</h3>
+        <h3 id="lights">Lights</h3>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -150,13 +168,17 @@
         </div>
     </div>
 
+
+
+
+
     <div class="container" id="contact">
         <h2 class="text-center my-4">Contact Us</h2>
         <div class="row">
             <div class="col-md-6">
                 <h4>Get in Touch</h4>
                 <p>If you have any queries or need support, feel free to reach out to us.</p>
-                <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/bhvtJRiqe5mZ4X1HA" target="_blank">Find us on Google Maps</a></p>
+                <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=123+Main+Street,+Your+City,+Your+State" target="_blank">Find us on Google Maps</a></p>
             </div>
             <div class="col-md-6">
                 <form id="contact-form">
@@ -201,7 +223,9 @@
         </div>
     </div>
 
-   <!-- Payment Modal -->
+
+
+    <!-- Payment Modal -->
 <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -226,7 +250,12 @@
 
 
 
+
+
+   
+
     
+
     <footer class="text-center my-4">
         <p>&copy; 2024 CHANDAN Electricals. All rights reserved.</p>
     </footer>
@@ -235,6 +264,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+
+
+    
+
+
 </body>
 </html>
 
