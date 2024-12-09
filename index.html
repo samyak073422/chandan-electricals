@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <title>CHANDAN Electricals</title>
+    <title>JOTHI Electricals</title>
     
 </head>
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#" onclick="scrollToHome()">CHANDAN Electricals</a>
+            <a class="navbar-brand" href="#" onclick="scrollToHome()">JOTHI Electricals</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quotation" onclick="scrollToElement('#quotation')">Quotation</a>
+                    </li>
                     <!-- Products Dropdown -->
                     <li class="nav-item dropdown">
+                        
                         <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Products
                         </a>
@@ -47,10 +53,41 @@
 
     <!-- Home Page -->
     <header class="text-center my-4" id="home" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <img src="./logo.png.svg" alt="CHANDAN Electricals Logo" class="img-fluid logo" style="max-height: 80%; width: auto;">
-        <h1 style="font-size: 2.5rem;">Welcome to CHANDAN Electricals</h1>
+        <img src="./Screenshot 2024-11-24 200458.png" alt="CHANDAN Electricals Logo" class="img-fluid logo" style="max-height: 80%; width: auto;">
+        <h1 style="font-size: 2.5rem;">Welcome to JOTHI Electricals</h1>
         <a href="#products" class="btn btn-primary mt-3">Shop Now</a>
     </header>
+
+
+<!--quotaion-->
+
+<section id="quotation">
+    <div class="quotation-container">
+      <h2>Request a Quotation</h2>
+      <p>Add products and quantities to get a custom price quote.</p>
+
+      <form id="quotationForm">
+        <div id="productContainer">
+          <div class="product-item">
+            <input type="text" name="productName[]" placeholder="Enter product name" required />
+            <input type="number" name="productQuantity[]" placeholder="Quantity" required min="1" />
+          </div>
+        </div>
+
+        <button type="button" onclick="addProduct()">Add Another Product</button>
+
+        <div class="customer-details">
+          <input type="text" name="customerName" placeholder="Your Name" required />
+          <input type="email" name="customerEmail" placeholder="Your Email" required />
+          <input type="tel" name="customerPhone" placeholder="Your Phone Number" required />
+        </div>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+ </section>
+
+
 
     <!-- Products Section -->
     <div class="container" id="products">
@@ -77,6 +114,23 @@
             <div class="col-md-4">
                 <div class="card">
                     <img src="./goldmedal wrie(2).jpeg" class="card-img-top" alt=" GOLDMEDAL WIRE">
+                    <div class="card-body">
+                        <h5 class="card-title">GOLDMEDAL WIRE</h5>
+                        <p class="card-text">THE RATE IS ACCORDING PER METER </p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control quantity" value="1" min="1" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primary add-to-cart" data-name="GOLDMEDAL WIRE" data-price="1100">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./images/goldmedal wrie(2).jpeg" class="card-img-top"  alt=" GOLDMEDAL WIRE">
                     <div class="card-body">
                         <h5 class="card-title">GOLDMEDAL WIRE</h5>
                         <p class="card-text">THE RATE IS ACCORDING PER METER </p>
@@ -178,10 +232,14 @@
             <div class="col-md-6">
                 <h4>Get in Touch</h4>
                 <p>If you have any queries or need support, feel free to reach out to us.</p>
-                <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=123+Main+Street,+Your+City,+Your+State" target="_blank">Find us on Google Maps</a></p>
+                <p><strong>Location:</strong> 
+                    <a href="https://www.google.com/maps/search/?api=1&query=123+Main+Street,+Your+City,+Your+State" target="_blank">
+                        Find us on Google Maps
+                    </a>
+                </p>
             </div>
             <div class="col-md-6">
-                <form id="contact-form">
+                <form id="contact-form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
@@ -194,6 +252,11 @@
                         <label for="message">Message</label>
                         <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
                     </div>
+                    <div class="form-group">
+                        <label for="fileUpload">Upload Files (Optional)</label>
+                        <input type="file" class="form-control" id="fileUpload" accept="image/*, video/*" multiple>
+                    </div>
+                    
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
@@ -249,13 +312,7 @@
 </div>
 
 
-
-
-
    
-
-    
-
     <footer class="text-center my-4">
         <p>&copy; 2024 CHANDAN Electricals. All rights reserved.</p>
     </footer>
@@ -273,6 +330,5 @@
 
 </body>
 </html>
-
 
 
