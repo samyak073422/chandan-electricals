@@ -18,7 +18,7 @@ h1, h2, h3 {
 .card-img-top {
     width: 100%;         /* Ensure the image takes up the full width of the card */
     height: 300px;       /* Set a fixed height for the images */
-    object-fit: cover;   /* Crop the image to fit the container without distortion */
+    object-fit: fill;   /* Crop the image to fit the container without distortion */
 }
 
 .card {
@@ -26,7 +26,7 @@ h1, h2, h3 {
 }
 
 .card-title {
-    color: #88A9C3;
+    color: #154163;
 }
 
 .card-text {
@@ -119,7 +119,75 @@ h1, h2, h3 {
 }
 
 .logo {
-    max-width: 18000px;
+    max-width: fit-content;
     height: auto;
     margin-bottom: 20px;
 }
+
+
+
+
+/* Quotation Section Styling */
+#quotation {
+    padding: 50px;
+    background-color: #051a2d;
+  }
+  
+  .quotation-container {
+    background-color: #051a2d;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+ 
+  
+  p {
+    color: #777;
+  }
+  
+  /* Form and Input Styling */
+  form {
+    margin-top: 15px;
+  }
+  
+  .product-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .product-item input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 5px;
+  }
+  
+  .product-item input[type="number"] {
+    width: 25%;
+  }
+  
+  .customer-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Button Styling */
+  button {
+    margin: 0px 0px;
+    padding: 12px 30px;
+    border: 1px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="button"] {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+  }
